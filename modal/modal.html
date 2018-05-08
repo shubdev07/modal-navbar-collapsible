@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal using Jquery</title>
+    <link rel="stylesheet" href="./modal.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>My custom Modal</h2>
+        <button id="btn">Open it</button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Modal using Jquery</p>
+        </div>
+
+    </div>
+    <script src="../vendor/jquery.js"></script>
+    <script>
+        const modal = $('#myModal');
+        const btn = $('#btn');
+        const close = $('.close');
+        btn.click(() => {
+            modal.css('display', 'block');
+        });
+        close.click(() => {
+            modal.css('display', 'none');
+        });
+        $(window).click((event) => {
+            console.log(event.target);
+            console.log(modal[0]);
+            //close the modal when user clicks outside of it
+            if (event.target == modal[0]) {
+                modal.css('display', 'none');
+            }
+        })
+    </script>
+</body>
+
+</html>

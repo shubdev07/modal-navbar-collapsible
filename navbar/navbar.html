@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navbar using Flexbox</title>
+    <link rel="stylesheet" href="./navbar.css">
+</head>
+
+<body>
+    <nav class="flex-row">
+        <div class="navigation">
+            <div class="social-links">
+                <a href="#" target="_blank">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+            </div>
+            <a class="mobile-nav-icon">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </nav>
+    <script src="https://use.fontawesome.com/cc82299954.js"></script>
+    <script src="../vendor/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".mobile-nav-icon").click(function () {
+                $(".nav-links").slideToggle(200);
+            });
+        });
+    </script>
+</body>
+
+</html>

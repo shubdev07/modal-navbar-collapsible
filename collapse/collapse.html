@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<Head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse Component using Jquery</title>
+    <link rel="stylesheet" type="text/css" href="collapse.css">
+</Head>
+
+<body>
+    <div class="container">
+        <div id="collapseHeader1">
+            <h3> Collapsible - 1 </h3>
+        </div>
+        <div id="collapseContent1" class="contentContainer">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero soluta repellat praesentium vero blanditiis animi
+                aut, mollitia quis nihil modi culpa magni dolores eveniet beatae fugit quaerat itaque doloribus perferendis.</p>
+        </div>
+        <div id="collapseHeader2">
+            <h3> Collapsible - 2 </h3>
+        </div>
+        <div id="collapseContent2" class="contentContainer">
+            <p> More Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corporis doloribus odit voluptates officia
+                impedit in? Saepe corporis assumenda sunt nostrum provident, repellendus perferendis, architecto delectus
+                obcaecati, soluta iusto quam.</p>
+        </div>
+        <div id="collapseHeader3">
+            <h3> Collapsible - 3 </h3>
+        </div>
+        <div id="collapseContent3" class="contentContainer">
+            <p>Some more Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nesciunt pariatur animi id eveniet,
+                nulla harum aut possimus inventore iste tempora iure, dolorem et. Quod laborum facere libero eum laudantium.</p>
+        </div>
+
+    </div>
+    <script src="../vendor/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#collapseContent1").hide();
+            $("#collapseContent2").hide();
+            $("#collapseContent3").hide();
+
+            $("#collapseHeader1").click(function () { //toggle collapse Content
+
+                $("#collapseContent1").slideToggle("slow");
+            });
+
+            $("#collapseHeader2").click(function () { //toggle collapse Content
+
+                $("#collapseContent2").slideToggle("slow");
+            });
+
+            $("#collapseHeader3").click(function () { //toggle collapse Content
+
+                $("#collapseContent3").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>

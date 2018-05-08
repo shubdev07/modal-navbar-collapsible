@@ -1,0 +1,27 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+h3 {
+  text-align: center;
+  font-family: "Times New Roman";
+  letter-spacing: 0.1em;
+}
+p {
+  font-size: 16px;
+}
+#collapseHeader1,
+#collapseHeader2,
+#collapseHeader3 {
+  cursor: pointer;
+  background-color: #e1f4ff;
+  margin-bottom: 2px;
+  padding: 10px 15px;
+}
+.contentContainer {
+  height: 15vh;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  overflow: scroll;
+}
